@@ -3,169 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TURBOROE | Regulatory Cost of Capital, Built in Public</title>
+  <title>TURBOROE RAISON D'ETRE</title>
   <meta
     name="description"
-    content="TURBOROE is an auditable cost of capital project for utility regulation, focused on turning raw source data into transparent, analyst-usable Excel workbooks."
+    content="A short personal statement on why TURBOROE exists, what it is trying to improve in regulatory finance, and what the project is meant to become."
   >
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="hero">
-      <nav class="topbar" aria-label="Primary">
-        <a class="brand" href="#top">TURBOROE</a>
-        <div class="topbar-links">
-          <a href="#scope">Scope</a>
-          <a href="#mvp">MVP</a>
-          <a href="#progress">Progress</a>
-        </div>
-      </nav>
-
-      <section class="hero-grid" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">Regulatory Finance Software</p>
-          <h1>Cost of capital analysis for utility cases, built to be audited instead of hand-waved.</h1>
-          <p class="lede">
-            TURBOROE is a focused effort to automate cost of capital analysis for water and gas
-            distribution utilities without hiding the underlying assumptions. The aim is simple:
-            produce a workflow another analyst can rerun, inspect, and defend.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#mvp">See the MVP target</a>
-            <a class="button button-secondary" href="#progress">See what is already built</a>
-          </div>
-        </div>
-
-        <aside class="hero-panel" aria-label="Project snapshot">
-          <p class="panel-label">Project Snapshot</p>
-          <ul class="metric-list">
-            <li><strong>4</strong><span>valuation methods already implemented</span></li>
-            <li><strong>1</strong><span>end-to-end analyst-ready workflow still being finished</span></li>
-            <li><strong>16</strong><span>utility names in the bespoke proxy index</span></li>
-            <li><strong>0</strong><span>interest in building a black box</span></li>
-          </ul>
-        </aside>
-      </section>
+  <div class="page-shell">
+    <header class="hero" id="top">
+      <p class="eyebrow">Personal Project</p>
+      <h1>TURBOROE RAISON D'ETRE</h1>
+      <p class="dek">
+        A working note on why this project exists, what it is trying to fix in cost of capital work,
+        and why it feels worth building in the first place.
+      </p>
     </header>
 
-    <main>
-      <section class="section story" id="scope">
-        <div class="section-heading">
-          <p class="eyebrow">What This Is</p>
-          <h2>A public-facing commitment page for a private working codebase.</h2>
+    <main class="content-grid">
+      <article class="essay-card" aria-labelledby="essay-title">
+        <div class="essay-header">
+          <p class="section-label">Essay</p>
+          <h2 id="essay-title">Why build it at all?</h2>
         </div>
-        <div class="story-grid">
+
+        <figure class="feature-figure">
+          <img
+            src="./images/image-1.jpeg"
+            alt="New Yorker-style cartoon about finding value others left on the table."
+          >
+          <figcaption>many such cases</figcaption>
+        </figure>
+
+        <div class="essay-body">
           <p>
-            The software itself is still private while the project is pushed to a minimum viable,
-            analyst-usable state. This page exists to make the goal concrete now instead of waiting
-            until everything is polished.
+            Setting the authorized return on equity for a regulated utility is oftentimes the most
+            controversial aspect of a rate case. Cost of capital witnesses will protest that this is
+            because ROE is "as much art as science," but this does the field of finance a great
+            disservice. Yes, many models involve parameters that give analysts a somewhat wider
+            discretion than we'd like, but we can get closer than practitioners would have us believe.
+            Instead, it is a hedge by practitioners, since they spend much time foraging for data
+            rather than testing their methods, so as a result end up citing decades-old papers and
+            tired sources to make their claims. This Python package is intended to vastly accelerate
+            the data collection and reporting aspects of regulatory cost of capital analysis. It is
+            not cutting-edge, relying on basic CAPM plus French Fama risk models in addition to
+            multi-stage and single-stage DCF, nor is it a magic bullet that will instantly win the
+            imprimatur of Public Utility Commissions. My prosaic belief is that EMH is basically
+            right and that the price information purveyed by markets contains mostly everything you
+            need to know.
           </p>
+
           <p>
-            The underlying project is designed to move from raw market and filing data to transparent
-            Excel outputs that keep formulas visible, assumptions reviewable, and the analytical path
-            easy to challenge.
+            Since consumers across the country are feeling squeezed, every line item in the revenue
+            requirement is subject to careful scrutiny, including rate case expense. My hope is that
+            this tool will greatly hasten and cheapen cost of capital analyses with a combination of
+            instant data collection, so long manually parsing Value Line reports, with transparency
+            and verifiability through code. Premium data subscriptions such as Value Line or Kroll's
+            will still have value in some cases, but 90 percent of the results can be obtained with
+            little more than free, publicly available information.
+          </p>
+
+          <p>
+            With token effort, anyone will be able to run this analysis. I plan to release two open
+            source versions by July 4, 2026: a bare-bones package only dependent on yfinance and
+            public APIs from FRED, and another that requires users to obtain a subscription to a
+            financial data provider I'm testing out, Financial Modeling Prep. I have no technical
+            ability, so 99 percent of the code is written by Claude and Codex.
+          </p>
+
+          <p>
+            A paucity of publicly traded water and gas distribution companies can make analyses
+            sensitive to the choice of proxy group. I am in the process of including a PCA analysis
+            to find companies that look like the score of companies, if that, currently included as
+            part of the proxy group. I also included the wreckage of a workbook designed to salvage
+            what I could from the comparable earnings model to no avail. The rest should be eminently
+            familiar to any practitioner. The whole point of this page is to inject some personality
+            into this extracurricular and hold myself accountable now that I've drawn a line in the
+            sand and put my reputation at risk. This ends my self-indulgent monologue, so long until
+            July 4th.
           </p>
         </div>
-      </section>
+      </article>
 
-      <section class="section methods">
-        <div class="section-heading">
-          <p class="eyebrow">Methods</p>
-          <h2>Four ways to estimate cost of equity, one auditable workflow.</h2>
-        </div>
-        <div class="card-grid">
-          <article class="card">
-            <h3>CAPM</h3>
-            <p>OLS beta, Blume adjustment, Hamada unlevering, and both book and market capital structure.</p>
-          </article>
-          <article class="card">
-            <h3>DCF</h3>
-            <p>Constant-growth and multi-stage dividend discount models with analyst and historical inputs.</p>
-          </article>
-          <article class="card">
-            <h3>Comparable Earnings</h3>
-            <p>Market-to-book versus forward ROE regression for a market-based return cross-check.</p>
-          </article>
-          <article class="card">
-            <h3>Risk Premium</h3>
-            <p>Yield-conditioned utility premium estimates using bond benchmarks, proxy indices, and HAC errors.</p>
-          </article>
-        </div>
-      </section>
+      <aside class="sidebar">
+        <section class="sidebar-card">
+          <p class="section-label">Project Notes</p>
+          <ul class="note-list">
+            <li>Built around transparency, repeatability, and auditable output.</li>
+            <li>Focused on regulatory cost of capital work for utility cases.</li>
+            <li>Meant to be personally motivating before it is broadly polished.</li>
+          </ul>
+        </section>
 
-      <section class="section progress" id="progress">
-        <div class="section-heading">
-          <p class="eyebrow">Progress So Far</p>
-          <h2>The analytical engine is ahead of the packaging work.</h2>
-        </div>
-        <div class="progress-layout">
-          <div class="status-card complete">
-            <p class="status-label">Already Built</p>
-            <ul class="checklist">
-              <li>Fetch layer for FRED, Yahoo, SEC EDGAR, and analyst estimate scraping</li>
-              <li>Clean layer and model-specific prep functions</li>
-              <li>CAPM, DCF, Comparable Earnings, and Risk Premium models</li>
-              <li>Excel output with visible formulas instead of opaque values</li>
-            </ul>
-          </div>
-          <div class="status-card focus" id="mvp">
-            <p class="status-label">Minimum Viable Project</p>
-            <p class="focus-copy">
-              The MVP is reached when another analyst can install, configure, run, and inspect the
-              workflow without needing the original author to translate the project for them.
-            </p>
-            <ul class="checklist focus-list">
-              <li>Finalize a stable main orchestration flow</li>
-              <li>Add startup validation for environment variables and required source files</li>
-              <li>Centralize tunable parameters in one documented place</li>
-              <li>Reduce startup friction to a short, realistic quick-start path</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        <section class="sidebar-card portrait-card">
+          <p class="section-label">Proof Of Life</p>
+          <figure class="sidebar-figure">
+            <img src="./images/image-3.jpeg" alt="Outdoor portrait from the source document.">
+            <figcaption>The person making the promise.</figcaption>
+          </figure>
+        </section>
 
-      <section class="section accountability">
-        <div class="section-heading">
-          <p class="eyebrow">Public Constraint</p>
-          <h2>This page is here to keep the finish line visible.</h2>
-        </div>
-        <div class="accountability-grid">
-          <div class="accountability-card">
-            <p class="accountability-label">North Star</p>
-            <p>
-              Deliver a fully auditable Excel workbook containing cost of capital estimates for
-              water and gas distribution utilities.
-            </p>
-          </div>
-          <div class="accountability-card">
-            <p class="accountability-label">Principle</p>
-            <p>
-              Automate repetitive work, but never at the cost of making the model harder to inspect.
-            </p>
-          </div>
-          <div class="accountability-card">
-            <p class="accountability-label">Current Choice</p>
-            <p>
-              Keep the code private until the workflow is sturdy enough to share without constant
-              explanation, while still being public about the project direction.
-            </p>
-          </div>
-        </div>
-      </section>
+        <section class="sidebar-card contact-card">
+          <p class="section-label">Contact</p>
+          <h2>Reach Out</h2>
+          <p class="contact-copy">
+            If you're in the regulatory community and this resonates, feel free to get in touch.
+          </p>
+          <a class="contact-link" href="mailto:Swilerm100@gmail.com">Swilerm100@gmail.com</a>
+        </section>
 
-      <section class="section footer-cta">
-        <div class="cta-panel">
-          <div>
-            <p class="eyebrow">Next Milestone</p>
-            <h2>Ship the analyst-usable version, then decide what should open up.</h2>
-          </div>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#mvp">Track the MVP</a>
-            <a class="button button-secondary" href="#scope">Why this exists</a>
-          </div>
-        </div>
-      </section>
+        <section class="sidebar-card image-card">
+          <p class="section-label">Patron Saint</p>
+          <figure class="sidebar-figure">
+            <img src="./images/image-2.jpeg" alt="Portrait image from the source document.">
+            <figcaption>Technical authorship outsourced to the machine spirits.</figcaption>
+          </figure>
+        </section>
+      </aside>
     </main>
   </div>
 </body>
