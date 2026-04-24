@@ -1,0 +1,369 @@
+:root {
+  --bg: #f4efe4;
+  --surface: rgba(255, 251, 243, 0.82);
+  --ink: #1f2a2a;
+  --muted: #526060;
+  --line: rgba(31, 42, 42, 0.12);
+  --brand: #9a3412;
+  --brand-deep: #5f2a15;
+  --accent: #0f766e;
+  --complete: #285943;
+  --shadow: 0 24px 60px rgba(76, 56, 33, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.12), transparent 32%),
+    radial-gradient(circle at top right, rgba(154, 52, 18, 0.18), transparent 28%),
+    linear-gradient(180deg, #f9f4e9 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+}
+
+.site-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 64px;
+}
+
+.hero,
+.section,
+.cta-panel {
+  backdrop-filter: blur(14px);
+}
+
+.hero {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: linear-gradient(160deg, rgba(255, 249, 238, 0.95), rgba(246, 236, 216, 0.88));
+  box-shadow: var(--shadow);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.brand,
+.topbar-links a,
+.button,
+.status-label,
+.panel-label,
+.eyebrow,
+.accountability-label {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.brand {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.topbar-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.topbar-links a {
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.hero-grid,
+.progress-layout,
+.story-grid,
+.accountability-grid,
+.cta-panel {
+  display: grid;
+  gap: 24px;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  align-items: start;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 0.73rem;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+.brand {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.94;
+  max-width: 11ch;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1;
+  max-width: 16ch;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.lede,
+.story-grid p,
+.card p,
+.focus-copy,
+.accountability-card p,
+.cta-panel p,
+.metric-list span,
+.checklist li {
+  font-size: 1.03rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.lede {
+  max-width: 58ch;
+  margin: 24px 0 0;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.button-primary {
+  color: #fffaf2;
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-deep) 100%);
+  box-shadow: 0 14px 28px rgba(95, 42, 21, 0.22);
+}
+
+.button-secondary {
+  border-color: rgba(31, 42, 42, 0.18);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.hero-panel,
+.card,
+.status-card,
+.accountability-card,
+.cta-panel {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--surface);
+}
+
+.hero-panel {
+  padding: 24px;
+}
+
+.panel-label,
+.status-label,
+.accountability-label {
+  margin: 0 0 16px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.metric-list,
+.checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.metric-list li {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+
+.metric-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.metric-list strong {
+  font-size: 2.3rem;
+  line-height: 1;
+  color: var(--brand-deep);
+}
+
+.section {
+  margin-top: 24px;
+  padding: 32px 24px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 251, 243, 0.68);
+  box-shadow: var(--shadow);
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+.story-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card-grid,
+.accountability-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card,
+.status-card,
+.accountability-card {
+  padding: 22px;
+}
+
+.progress-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.status-card.complete .status-label {
+  color: var(--complete);
+}
+
+.status-card.focus {
+  background: linear-gradient(180deg, rgba(154, 52, 18, 0.08), rgba(255, 248, 235, 0.9));
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 28px;
+  margin-top: 12px;
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.complete .checklist li::before {
+  background: var(--complete);
+}
+
+.focus-list li::before {
+  background: var(--brand);
+}
+
+.accountability-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cta-panel {
+  grid-template-columns: minmax(0, 1.2fr) auto;
+  align-items: center;
+  padding: 26px;
+  background:
+    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(255, 248, 235, 0.96), rgba(244, 239, 228, 0.92));
+}
+
+@media (max-width: 960px) {
+  .hero-grid,
+  .card-grid,
+  .progress-layout,
+  .accountability-grid,
+  .story-grid,
+  .cta-panel {
+    grid-template-columns: 1fr;
+  }
+
+  h1,
+  h2 {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-shell {
+    width: min(100% - 20px, 1160px);
+    padding-top: 12px;
+  }
+
+  .hero,
+  .section {
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .topbar {
+    margin-bottom: 28px;
+  }
+
+  .topbar,
+  .hero-actions {
+    align-items: stretch;
+  }
+
+  .topbar,
+  .topbar-links,
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}

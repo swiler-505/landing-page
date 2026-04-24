@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TURBOROE | Regulatory Cost of Capital, Built in Public</title>
+  <meta
+    name="description"
+    content="TURBOROE is an auditable cost of capital project for utility regulation, focused on turning raw source data into transparent, analyst-usable Excel workbooks."
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <nav class="topbar" aria-label="Primary">
+        <a class="brand" href="#top">TURBOROE</a>
+        <div class="topbar-links">
+          <a href="#scope">Scope</a>
+          <a href="#mvp">MVP</a>
+          <a href="#progress">Progress</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Regulatory Finance Software</p>
+          <h1>Cost of capital analysis for utility cases, built to be audited instead of hand-waved.</h1>
+          <p class="lede">
+            TURBOROE is a focused effort to automate cost of capital analysis for water and gas
+            distribution utilities without hiding the underlying assumptions. The aim is simple:
+            produce a workflow another analyst can rerun, inspect, and defend.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#mvp">See the MVP target</a>
+            <a class="button button-secondary" href="#progress">See what is already built</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Project snapshot">
+          <p class="panel-label">Project Snapshot</p>
+          <ul class="metric-list">
+            <li><strong>4</strong><span>valuation methods already implemented</span></li>
+            <li><strong>1</strong><span>end-to-end analyst-ready workflow still being finished</span></li>
+            <li><strong>16</strong><span>utility names in the bespoke proxy index</span></li>
+            <li><strong>0</strong><span>interest in building a black box</span></li>
+          </ul>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section story" id="scope">
+        <div class="section-heading">
+          <p class="eyebrow">What This Is</p>
+          <h2>A public-facing commitment page for a private working codebase.</h2>
+        </div>
+        <div class="story-grid">
+          <p>
+            The software itself is still private while the project is pushed to a minimum viable,
+            analyst-usable state. This page exists to make the goal concrete now instead of waiting
+            until everything is polished.
+          </p>
+          <p>
+            The underlying project is designed to move from raw market and filing data to transparent
+            Excel outputs that keep formulas visible, assumptions reviewable, and the analytical path
+            easy to challenge.
+          </p>
+        </div>
+      </section>
+
+      <section class="section methods">
+        <div class="section-heading">
+          <p class="eyebrow">Methods</p>
+          <h2>Four ways to estimate cost of equity, one auditable workflow.</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>CAPM</h3>
+            <p>OLS beta, Blume adjustment, Hamada unlevering, and both book and market capital structure.</p>
+          </article>
+          <article class="card">
+            <h3>DCF</h3>
+            <p>Constant-growth and multi-stage dividend discount models with analyst and historical inputs.</p>
+          </article>
+          <article class="card">
+            <h3>Comparable Earnings</h3>
+            <p>Market-to-book versus forward ROE regression for a market-based return cross-check.</p>
+          </article>
+          <article class="card">
+            <h3>Risk Premium</h3>
+            <p>Yield-conditioned utility premium estimates using bond benchmarks, proxy indices, and HAC errors.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section progress" id="progress">
+        <div class="section-heading">
+          <p class="eyebrow">Progress So Far</p>
+          <h2>The analytical engine is ahead of the packaging work.</h2>
+        </div>
+        <div class="progress-layout">
+          <div class="status-card complete">
+            <p class="status-label">Already Built</p>
+            <ul class="checklist">
+              <li>Fetch layer for FRED, Yahoo, SEC EDGAR, and analyst estimate scraping</li>
+              <li>Clean layer and model-specific prep functions</li>
+              <li>CAPM, DCF, Comparable Earnings, and Risk Premium models</li>
+              <li>Excel output with visible formulas instead of opaque values</li>
+            </ul>
+          </div>
+          <div class="status-card focus" id="mvp">
+            <p class="status-label">Minimum Viable Project</p>
+            <p class="focus-copy">
+              The MVP is reached when another analyst can install, configure, run, and inspect the
+              workflow without needing the original author to translate the project for them.
+            </p>
+            <ul class="checklist focus-list">
+              <li>Finalize a stable main orchestration flow</li>
+              <li>Add startup validation for environment variables and required source files</li>
+              <li>Centralize tunable parameters in one documented place</li>
+              <li>Reduce startup friction to a short, realistic quick-start path</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section accountability">
+        <div class="section-heading">
+          <p class="eyebrow">Public Constraint</p>
+          <h2>This page is here to keep the finish line visible.</h2>
+        </div>
+        <div class="accountability-grid">
+          <div class="accountability-card">
+            <p class="accountability-label">North Star</p>
+            <p>
+              Deliver a fully auditable Excel workbook containing cost of capital estimates for
+              water and gas distribution utilities.
+            </p>
+          </div>
+          <div class="accountability-card">
+            <p class="accountability-label">Principle</p>
+            <p>
+              Automate repetitive work, but never at the cost of making the model harder to inspect.
+            </p>
+          </div>
+          <div class="accountability-card">
+            <p class="accountability-label">Current Choice</p>
+            <p>
+              Keep the code private until the workflow is sturdy enough to share without constant
+              explanation, while still being public about the project direction.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section footer-cta">
+        <div class="cta-panel">
+          <div>
+            <p class="eyebrow">Next Milestone</p>
+            <h2>Ship the analyst-usable version, then decide what should open up.</h2>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#mvp">Track the MVP</a>
+            <a class="button button-secondary" href="#scope">Why this exists</a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
