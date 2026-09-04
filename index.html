@@ -3,115 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TURBOROE RAISON D'ETRE</title>
-  <meta
-    name="description"
-    content="A short personal statement on why TURBOROE exists, what it is trying to improve in regulatory finance, and what the project is meant to become."
-  >
-  <link rel="stylesheet" href="./styles.css">
+  <title>TURBOROE | Utility Cost of Capital</title>
+  <meta name="description" content="An open-source approach to faster, more transparent utility return on equity analysis.">
+  <link rel="stylesheet" href="./styles.css?v=3">
 </head>
 <body>
   <div class="page-shell">
-    <header class="hero" id="top">
-      <p class="eyebrow">Personal Project</p>
-      <h1>TURBOROE RAISON D'ETRE</h1>
-      <p class="dek">
-        A working note on why this project exists, what it is trying to fix in cost of capital work,
-        and why it feels worth building in the first place.
-      </p>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="TURBOROE home"><span class="wordmark-mark" aria-hidden="true">&lt;/&gt;</span>TURBOROE</a>
+      <nav aria-label="Primary navigation">
+        <a href="#approach">Approach</a>
+        <a href="#sources">Sources</a>
+        <a href="#notes">Notes</a>
+        <a class="nav-github" href="https://github.com/swiler-505/TURBOROE">GitHub <span aria-hidden="true">&nearr;</span></a>
+      </nav>
     </header>
 
-    <main class="content-grid">
-      <article class="essay-card" aria-labelledby="essay-title">
-        <div class="essay-header">
-          <p>
-          <h2 id="essay-title">Impetus</h2>
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Open-source regulatory finance</p>
+          <h1 id="page-title">Less clerical work.<br>More defensible ROE.</h1>
+          <p class="hero-lede">TURBOROE is a practical cost of capital package for utility ratemaking: faster data collection, visible assumptions, and a more direct path to a return on equity analysis that can be inspected rather than merely asserted.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/swiler-505/TURBOROE">View the repository <span aria-hidden="true">&rarr;</span></a>
+            <a class="button button-secondary" href="#approach">Read the case</a>
+          </div>
         </div>
 
-        <div class="essay-body">
-          <p>
-            Setting the authorized return on equity for a regulated utility is oftentimes the most
-            controversial aspect of a rate case. Cost of capital witnesses will protest that this is
-            because ROE is "as much art as science," but this does the field of finance a great
-            disservice. Yes, many models involve parameters that give analysts a somewhat wider
-            discretion than we'd like, but we can get closer than practitioners would have us believe.
-            Instead, it is a hedge by practitioners, since they spend much time foraging for data
-            rather than testing their methods, so as a result end up citing decades-old papers and
-            tired sources to make their claims. This Python package is intended to vastly accelerate
-            the data collection and reporting aspects of regulatory cost of capital analysis. It is
-            not cutting-edge, relying on basic CAPM plus French Fama risk models in addition to
-            multi-stage and single-stage DCF, nor is it a magic bullet that will instantly win the
-            imprimatur of Public Utility Commissions. My prosaic belief is that EMH is basically
-            right and that the price information purveyed by markets contains mostly everything you
-            need to know.
-          </p>
-
-          <figure class="feature-figure">
-            <img
-              src="./images/image-1.jpeg"
-              alt="New Yorker-style cartoon about finding value others left on the table."
-            >
-            <figcaption>many such cases</figcaption>
-          </figure>
-
-          <p>
-            Since consumers across the country are feeling squeezed, every line item in the revenue
-            requirement is subject to careful scrutiny, including rate case expense. My hope is that
-            this tool will greatly hasten and cheapen cost of capital analyses with a combination of
-            instant data collection, so long manually parsing Value Line reports, with transparency
-            and verifiability through code. Premium data subscriptions such as Value Line or Kroll's
-            will still have value in some cases, but 90 percent of the results can be obtained with
-            little more than free, publicly available information.
-          </p>
-
-          <p>
-            With token effort, anyone will be able to run this analysis. I plan to release two open
-            source versions by July 4, 2026: a bare-bones package only dependent on yfinance and
-            public APIs from FRED, and another that requires users to obtain a subscription to a
-            financial data provider I'm testing out, Financial Modeling Prep. I have no technical
-            ability, so 99 percent of the code is written by Claude and Codex.
-          </p>
-
-          <p>
-            A paucity of publicly traded water and gas distribution companies can make analyses
-            sensitive to the choice of proxy group. I am in the process of including a PCA analysis
-            to find companies that look like the score of companies, if that, currently included as
-            part of the proxy group. I also included the wreckage of a workbook designed to salvage
-            what I could from the comparable earnings model to no avail. The rest should be eminently
-            familiar to any practitioner. The whole point of this page is to inject some personality
-            into this extracurricular and hold myself accountable now that I've drawn a line in the
-            sand and put my reputation at risk. This ends my self-indulgent monologue, so long until
-            July 4th.
-          </p>
+        <div class="workflow-card" aria-label="TURBOROE workflow">
+          <div class="workflow-topline"><span>turboroe.py</span><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+          <ol class="workflow-list">
+            <li><span class="step-number">01</span><span>Collect public market and filing data</span></li>
+            <li><span class="step-number">02</span><span>Test established cost of equity methods</span></li>
+            <li><span class="step-number">03</span><span>Export a transparent analyst workbook</span></li>
+          </ol>
+          <div class="workflow-output"><span class="file-icon" aria-hidden="true">&#9638;</span><div><strong>ROE analysis</strong><small>auditable Excel output</small></div><span class="ready-badge">ready</span></div>
         </div>
-      </article>
+      </section>
 
-      <aside class="sidebar">
-        <section class="sidebar-card portrait-card">
-          <figure class="sidebar-figure">
-            <img src="./images/image-3.jpeg" alt="Outdoor portrait from the source document.">
-            <figcaption>the work is MYSTERIOUS and IMPORTANT</figcaption>
-          </figure>
-        </section>
+      <section class="statement section" id="approach" aria-labelledby="statement-title">
+        <div class="section-intro">
+          <p class="section-kicker">The case for it</p>
+          <h2 id="statement-title">The argument should be about finance, not transcription.</h2>
+        </div>
+        <div class="statement-copy">
+          <p>Cost of capital is a particularly expensive and litigious component of utility rate cases. Rather than debate and answer questions at the crux of the argument, such as what is a reasonable terminal growth rate, what is the right beta, or whether additional risk factors should be considered, much work from cost of capital witnesses involves rather menial data entry and logging.</p>
+          <p>TURBOROE moves that repetitive collection work into a reproducible Python workflow, leaving more room for the questions that deserve professional judgment. The aim is not to automate conviction. It is to make the analytical trail easier to reproduce, interrogate, and improve.</p>
+        </div>
+      </section>
 
-        <section class="sidebar-card contact-card">
-          <p class="section-label">Contact</p>
-          <h2>Reach Out</h2>
-          <p class="contact-copy">
-            Questions, comments, or concerns:
-          </p>
-          <a class="contact-link" href="mailto:Swilerm100@gmail.com">Swilerm100@gmail.com</a>
-        </section>
+      <section class="method-grid" aria-label="TURBOROE principles">
+        <article class="method-card"><span class="method-index">01</span><h3>Public inputs</h3><p>Pull familiar proceeding-ready data without treating an expensive terminal as the analytical method.</p></article>
+        <article class="method-card"><span class="method-index">02</span><h3>Visible choices</h3><p>Make the beta, growth rate, risk factors, and model specifications easy to identify and challenge.</p></article>
+        <article class="method-card"><span class="method-index">03</span><h3>Useful output</h3><p>Turn the workflow into an efficient return on equity analysis for regulatory ratemaking.</p></article>
+      </section>
 
-        <section class="sidebar-card image-card">
-          <p class="section-label">Patron Saint</p>
-          <figure class="sidebar-figure">
-            <img src="./images/image-2.jpeg" alt="Portrait image from the source document.">
-            <figcaption>Technical authorship outsourced to the machine spirits.</figcaption>
-          </figure>
-        </section>
-      </aside>
+      <section class="sources section" id="sources" aria-labelledby="sources-title">
+        <div class="section-intro">
+          <p class="section-kicker">The data library</p>
+          <h2 id="sources-title">Familiar inputs, gathered in one place.</h2>
+          <p>The package relies on sources commonly used in cost of capital proceedings, plus a few academic standards worth keeping close.</p>
+        </div>
+        <div class="source-grid">
+          <a class="source-card" href="https://fred.stlouisfed.org/" target="_blank" rel="noreferrer"><span class="source-mark source-mark-fred">FRED</span><span>Rates, inflation, and macroeconomic series</span><b aria-hidden="true">&nearr;</b></a>
+          <a class="source-card" href="https://www.sec.gov/edgar" target="_blank" rel="noreferrer"><span class="source-mark source-mark-sec">SEC</span><span>Filings and reported financial information</span><b aria-hidden="true">&nearr;</b></a>
+          <a class="source-card" href="https://finance.yahoo.com/" target="_blank" rel="noreferrer"><span class="source-mark source-mark-yahoo">Yahoo Finance</span><span>Market data via Python API</span><b aria-hidden="true">&nearr;</b></a>
+          <a class="source-card" href="https://pages.stern.nyu.edu/~adamodar/" target="_blank" rel="noreferrer"><span class="source-mark source-mark-damodaran">Damodaran</span><span>Market risk premium reference data</span><b aria-hidden="true">&nearr;</b></a>
+          <a class="source-card source-card-wide" href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html#Research" target="_blank" rel="noreferrer"><span class="source-mark source-mark-french">Kenneth R. French Data Library</span><span>Academic factor data for a more complete view of risk</span><b aria-hidden="true">&nearr;</b></a>
+        </div>
+      </section>
+
+      <section class="position section" aria-labelledby="position-title">
+        <div class="position-quote" aria-hidden="true">&ldquo;</div>
+        <div>
+          <p class="section-kicker">A stated position</p>
+          <h2 id="position-title">The package is for the quality of the analysis, not for a side of the table.</h2>
+          <p>TURBOROE is not intended to serve only company witnesses, staff, or consumer advocates. It follows the methods where they lead. At present, the application of multi-stage DCF, a modest market risk premium, and a rejection of Morin's risk premium methods produces a cost of equity below the current status quo.</p>
+        </div>
+      </section>
+
+      <section class="closing" id="notes" aria-labelledby="closing-title">
+        <div class="closing-copy">
+          <p class="section-kicker">The invitation</p>
+          <h2 id="closing-title">Try the package. Argue with the assumptions.</h2>
+          <p>Consider using this open-source package for a free and efficient return on equity analysis for regulatory ratemaking purposes. Despite the inherent uncertainty in estimating a utility return on equity, the standards set forth in Hope and Bluefield delineate a more straightforward path than many consultants would have you believe.</p>
+          <p>See the website and <a href="https://github.com/swiler-505/TURBOROE">GitHub repository</a> for project details. This project relied heavily on Claude Code and Codex: three cheers for vibe coding.</p>
+          <a class="button button-primary" href="https://github.com/swiler-505/TURBOROE">Explore TURBOROE <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <aside class="personal-notes" aria-label="Personal project notes">
+          <figure class="portrait-figure"><img src="./images/image-3.jpeg" alt="The person building TURBOROE outdoors in sunglasses."><figcaption>the work is MYSTERIOUS and IMPORTANT</figcaption></figure>
+          <div class="contact-block"><span>Questions, comments, or concerns</span><a href="mailto:Swilerm100@gmail.com">Swilerm100@gmail.com</a></div>
+        </aside>
+      </section>
     </main>
+
+    <footer class="site-footer"><span>Built with public data, Python, and questionable confidence.</span><a href="#top">Back to top &uarr;</a></footer>
   </div>
 </body>
 </html>
